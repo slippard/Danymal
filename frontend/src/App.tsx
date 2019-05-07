@@ -63,6 +63,7 @@ class App extends React.Component<{}, AppState> {
 
   private handleLogin = async (): Promise<void> => {
     const { email, password } = this.state;
+    if(!email || !password) return this.setState({ error: "Invalid email or password, please try again." });
     try {
       this.setState({ error: "" });
       this.setState({ isRequesting: true });
