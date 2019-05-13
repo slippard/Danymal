@@ -3,6 +3,7 @@ import * as React from 'react';
 import './App.css';
 import * as session from './session';
 import logo from './logo.png';
+import Home from './components/Home/Home';
 import Private from './components/Private/Private';
 
 export interface AppState {
@@ -30,7 +31,8 @@ class App extends React.Component<{}, AppState> {
 
   public render() {
     return (
-      <div className="App">
+      <Home title={0}/>
+      /* <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome</h1>
@@ -57,7 +59,7 @@ class App extends React.Component<{}, AppState> {
             <button disabled={this.state.isRequesting} onClick={this.handleLogin}>Log in</button>
           </div>
         )}
-      </div>
+      </div> */
     );
   }
 
